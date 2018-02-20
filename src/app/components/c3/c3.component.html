@@ -1,0 +1,48 @@
+<div class="container">
+        <h1 style="margin-left:0%">Componente 3</h1>
+        <br>
+    <div class="card">
+            <div class="card-body">
+                <form #miForm = "ngForm">
+                    <div class="form-group">
+                            <label for="nombre" class=" col-form-label col-form-label-sm">Nombre </label>
+                            <input type="text" id="nombre" name="nombre" class="form-control form-control-sm"  [(ngModel)]="persona1.nombre" require >
+
+                    </div>
+                    <div class="form-group">
+                            <label for="codigo" class=" col-form-label col-form-label-sm">Código </label>
+                            <input type="text" id="codigo" name="codigo" [(ngModel)]="persona1.codigo" class="form-control form-control-sm"  required>
+                        
+                        </div>
+                        <div class="form-group">
+                           <select class="form-control" id="tipo" [(ngModel)]="persona1.tipo" name="tipo">
+                               <option value="1">1</option>
+                               <option value="2">2</option>
+                               <option value="3">3</option>
+                           </select>
+                        </div>
+                    <button type="button" class="btn btn-primary btn-sm">Agregar</button>
+                </form>
+            </div>
+    </div>
+    <aside class="container">
+        <!-- <code class="row">
+            <strong>Nombre: {{attrnombre.value}}</strong>
+        </code>
+        <code class="row">
+            <strong>class Name: {{attrnombre.className}}</strong>
+        </code>        
+        <code class="row">
+            <strong>Código: {{attrcodigo.value}}</strong>
+        </code>
+        <code class="row">
+            <strong>Tipo: {{attrtipo.value}}</strong>
+        </code> -->
+        <code class="row">
+                <strong>miForm: {{miForm.value | json}}</strong>
+        </code>
+        
+    </aside>    
+            
+</div>
+

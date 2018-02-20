@@ -1,0 +1,6 @@
+<ul>
+    <li *ngFor="let app of apps">
+        {{app.id}} {{app.name}}
+        <button (click)="onEdit(app)">Editar</button>
+    </li>
+</ul>

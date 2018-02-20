@@ -1,0 +1,48 @@
+<div class="container">
+        <h1 style="margin-left:0%">Componente 3</h1>
+        <br>
+    <div class="card">
+            <div class="card-body">
+                <form [formGroup]="personaForm" novalidate>
+                    <div class="form-group">
+                            <label for="nombre" class=" col-form-label col-form-label-sm">Nombre </label>
+                            <input type="text" id="nombre" name="nombre" formControlName="nombre" class="form-control form-control-sm">
+
+                    </div>
+                    <div class="form-group">
+                            <label for="codigo" class=" col-form-label col-form-label-sm">Código </label>
+                            <input type="text" id="codigo" name="codigo" formControlName="codigo"  class="form-control form-control-sm">                        
+                    </div>
+                    <div class="form-group">
+                            <label for="email" class=" col-form-label col-form-label-sm">Email </label>
+                            <input type="text" id="email" name="email" formControlName="email"  class="form-control form-control-sm">
+                        
+                    </div>
+                    <div class="form-group">
+                           <select class="form-control" id="tipo" formControlName="tipo" name="tipo">
+                               <option value="1">1</option>
+                               <option value="2">2</option>
+                               <option value="3">3</option>
+                           </select>
+                        </div>
+                    <button type="button" class="btn btn-primary btn-sm" [disabled]="personaForm.status == 'INVALID'">Agregar</button>
+                    <button (click)="onChange()">Change value</button>
+                </form>
+            </div>
+    </div>
+    <aside class="container">
+       
+        <code class="row">
+                <strong>miForm: {{personaForm.value | json}}</strong>
+        </code>
+        <code class="row">
+                <strong>miForm: {{personaForm.status | json}}</strong>
+        </code>
+        
+    </aside>    
+            
+</div>
+
+
+
+ <!-- <input class="form-control" name="name" type="text" [(formControl)]="name"> -->
